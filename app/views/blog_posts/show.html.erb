@@ -36,6 +36,8 @@
       <p><span class="posted-at"><%= comment.created_at.strftime('%m/%d/%Y %H:%M:%S') %></span></p>
       <%= link_to "Edit Comment", edit_blog_post_comment_path(@blog_post, comment) %> |
       <%= link_to 'Destroy', [comment.blog_post, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
+
     </div>
-  <%end%>
-</div>
+    
+  </div>
+<% end %>
