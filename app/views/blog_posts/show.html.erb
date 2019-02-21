@@ -5,7 +5,7 @@
     <%= @blog_post.title %>
   </div>
   <div class="panel-body">
-    by <strong><%= link_to blog_post.user.username, user_posts_path(id: @blog_post.user.id) %></strong><span class="posted-at">posted at: <%= @blog_post.created_at.strftime('%m/%d/%Y at %I:%M%p') %></span><br /></p>
+    by <strong><%= link_to @blog_post.user.username, user_posts_path(id: @blog_post.user.id) %></strong><span class="posted-at">posted at: <%= @blog_post.created_at.strftime('%m/%d/%Y at %I:%M%p') %></span><br /></p>
     <p><%= @blog_post.blog_entry %></p>
   </div>
 <% if current_user.id == @blog_post.user.id %>
@@ -40,4 +40,5 @@
     </div>
     
   </div>
+<% end %>
 <% end %>
